@@ -1,3 +1,16 @@
-const ProgressPage = () => <h1>rogress!</h1>;
+import Container from 'layouts/Container';
+import Seo from 'components/Seo';
+import { Fragment } from 'react';
+
+const ProgressPage = () => (
+  <Fragment>
+    <Container>
+      <Fragment>
+        <Seo title="Home" />
+        progress
+      </Fragment>
+    </Container>
+  </Fragment>
+);
 
 export default ProgressPage;

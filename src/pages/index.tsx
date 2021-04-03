@@ -5,8 +5,10 @@ import { Fragment } from 'react';
 const MainPage = () => (
   <Fragment>
     <Container>
-      <Seo title="Home" />
-      sda
+      <Fragment>
+        <Seo title="Home" />
+        index
+      </Fragment>
     </Container>
   </Fragment>
 );
