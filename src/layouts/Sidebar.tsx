@@ -10,7 +10,7 @@ const Sidebar:React.FC<SidebarProps>=() => (
     </li>
     <li>
       <Link activeClassName="active" href="/progress">
-        <a>Progress</a>
+        <a className="bg-primary-color">Progress</a>
       </Link>
     </li>
     <li>

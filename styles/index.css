@@ -1,3 +1,11 @@
+
+.__next,
+#__next{
+ --primary-color: #FB6D3A;
+ --secondary-color:#503E9D;
+}
+
+
 .active{
- background-color: tomato;
+ background-color: var(--primary-color);
 }
