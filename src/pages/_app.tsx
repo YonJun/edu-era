@@ -1,8 +1,10 @@
-import "tailwindcss/tailwind.css";
-import "../../styles/index.css";
+import { FC } from 'react';
+import 'tailwindcss/tailwind.css';
+import 'styles/index.css';
 
-function MyApp({ Component, pageProps }: any) {
+interface AppProps {}
+const App: FC<AppProps> = ({ Component, pageProps }: any) => {
   return <Component {...pageProps} />;
-}
+};
 
-export default MyApp;
+export default App;

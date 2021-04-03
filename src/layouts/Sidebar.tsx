@@ -1,10 +1,10 @@
-import Link from "components/Link";
+import Link from 'components/Link';
 
 interface SidebarProps {}
-const Sidebar:React.FC<SidebarProps>=() => (
+const Sidebar: React.FC<SidebarProps> = () => (
   <ul>
     <li>
-      <Link activeClassName="active"  href="/">
+      <Link activeClassName="active" href="/">
         <a className="text-white hover:text-red-500">Home</a>
       </Link>
     </li>
@@ -25,4 +25,4 @@ const Sidebar:React.FC<SidebarProps>=() => (
     </li>
   </ul>
 );
-export default Sidebar
+export default Sidebar;

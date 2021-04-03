@@ -1,1 +1,1 @@
-export const __TITLE__ = "GOSFIL";
+export const __TITLE__ = 'GOSFIL';

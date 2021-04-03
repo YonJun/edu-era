@@ -1,6 +1,6 @@
-import Container from "../layouts/Container";
-import Seo from "../components/Seo";
-import { Fragment } from "react";
+import Container from 'layouts/Container';
+import Seo from 'components/Seo';
+import { Fragment } from 'react';
 
 const MainPage = () => (
   <Fragment>
