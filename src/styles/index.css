@@ -1,11 +1,10 @@
-
 .__next,
-#__next{
- --primary-color: #FB6D3A;
- --secondary-color:#503E9D;
+#__next {
+  --primary-main: #fb6d3a;
+  --secondary-main: #503e9d;
+  --secondary-light: #6553b2;
 }
 
-
-.active{
- background-color: var(--primary-color);
+.active {
+  background-color: var(--primary-main);
 }

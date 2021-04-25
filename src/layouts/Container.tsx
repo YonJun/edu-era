@@ -1,22 +1,20 @@
 import Seo from 'components/Seo';
 import Sidebar from './Sidebar';
-import styled from 'styled-components';
 
-const Title = styled.h1`
-  color: red;
-  font-size: 50px;
-`;
 interface ContainerProps {
   children: JSX.Element;
 }
 const Container: React.FC<ContainerProps> = ({ children }) => {
   return (
     <div className="h-auto min-h-screen bg-yellow-100 flex items-center justify-center">
-      <div className="bg-secondary-color lg:container p-4" style={{ borderRadius: 40 }}>
-        <Title>My page</Title>
+      <div className="bg-secondary-main lg:container p-5" style={{ borderRadius: 40 }}>
         <Seo />
-        <Sidebar />
-        {children}
+        <div className="grid grid-cols-12">
+          <div className="col-span-3 bg-green-600">
+            <Sidebar />
+          </div>
+          <div className="col-span-9  bg-green-700">{children}</div>
+        </div>
       </div>
     </div>
   );

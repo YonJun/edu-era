@@ -15,7 +15,8 @@ const Link: FC<LinkProps> = ({ children, activeClassName, ...props }) => {
   const child = Children.only(children);
   const childClassName = child.props.className || '';
 
-  const className = asPath === props.href || asPath === props.as ? `${childClassName} ${activeClassName}`.trim() : childClassName;
+  const className =
+    asPath === props.href || asPath === props.as ? `${childClassName} ${activeClassName ?? ''}`.trim() : childClassName;
 
   return (
     <NextLink {...props}>
