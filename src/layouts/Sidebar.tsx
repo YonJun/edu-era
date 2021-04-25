@@ -14,7 +14,7 @@ const ListLinks = [
 interface SidebarProps {}
 const Sidebar: React.FC<SidebarProps> = () => (
   <Fragment>
-    <div className="bg-red-500 pl-4 text-white text-3xl flex items-center h-40">
+    <div className="pl-4 text-white text-3xl flex items-center h-40">
       <Link href="/">
         <a>
           <div className="font-bold w-20 h-20 text-center bg-secondary-light rounded-3xl" style={{ lineHeight: '5rem' }}>
@@ -35,11 +35,11 @@ const Sidebar: React.FC<SidebarProps> = () => (
     <ul className="mt-20 pl-4">
       {ListLinks.map((link) => (
         <li key={link.label}>
-          <Link activeClassName="active" href={link.to}>
+          <Link activeClassName="active text-secondary-light" href={link.to}>
             <div className="inverted-border-radius">
-              <a className="link pl-4  flex items-center">
-                <FontAwesomeIcon icon={link.Icon} />
-                <p className="pl-2">{link.label}</p>
+              <a className="link pl-4 flex items-center cursor-pointer">
+                <FontAwesomeIcon className="text-gray-400" icon={link.Icon} />
+                <p className="pl-2 text-white">{link.label}</p>
               </a>
             </div>
           </Link>
