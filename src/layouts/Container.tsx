@@ -6,8 +6,8 @@ interface ContainerProps {
 }
 const Container: React.FC<ContainerProps> = ({ children }) => {
   return (
-    <div className="h-auto min-h-screen flex items-center justify-center">
-      <div className="bg-secondary-main p-5" style={{ borderRadius: 40, width: 1000 }}>
+    <div className="mt-12 flex items-center justify-center">
+      <div className="box-border bg-secondary-main p-5" style={{ borderRadius: 40, width: 1000 }}>
         <Seo />
         <div className="grid grid-cols-12">
           <div className="col-span-3">

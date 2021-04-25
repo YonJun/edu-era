@@ -11,22 +11,26 @@ const ListLinks = [
   { Icon: faCog, label: 'Settings', to: '/Settings' },
 ];
 
+const SQUARE = 65;
 interface SidebarProps {}
 const Sidebar: React.FC<SidebarProps> = () => (
   <Fragment>
-    <div className="pl-4 text-white text-3xl flex items-center h-40">
+    <div className="pl-4 text-white text-2xl flex items-center h-40">
       <Link href="/">
         <a>
-          <div className="font-bold w-20 h-20 text-center bg-secondary-light rounded-3xl" style={{ lineHeight: '5rem' }}>
+          <div
+            className="font-bold text-center bg-secondary-light rounded-3xl"
+            style={{ lineHeight: `${SQUARE}px`, width: SQUARE, height: SQUARE }}
+          >
             E
           </div>
         </a>
       </Link>
-      <div className="pl-4" style={{ lineHeight: '5rem' }}>
+      <div className="pl-4" style={{ lineHeight: SQUARE }}>
         <Link href="/">
           <a>
             <p className="font-bold">
-              Edu<span className="font-semibold">Era</span>
+              Edu<span className="font-normal">Era</span>
             </p>
           </a>
         </Link>
