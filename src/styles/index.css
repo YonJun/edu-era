@@ -23,7 +23,6 @@
   height: 50px;
   cursor: pointer;
   line-height: 50px;
-  padding-left: 25px;
 }
 
 .inverted-border-radius::after,

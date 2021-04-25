@@ -1,5 +1,15 @@
 import Link from 'components/Link';
 import { Fragment } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faCog } from '@fortawesome/free-solid-svg-icons';
+import { faChartBar, faComment } from '@fortawesome/free-regular-svg-icons';
+
+const ListLinks = [
+  { Icon: faHome, label: 'Home', to: '/' },
+  { Icon: faChartBar, label: 'Progress', to: '/progress' },
+  { Icon: faComment, label: 'Message', to: '/Message' },
+  { Icon: faCog, label: 'Settings', to: '/Settings' },
+];
 
 interface SidebarProps {}
 const Sidebar: React.FC<SidebarProps> = () => (
@@ -23,34 +33,18 @@ const Sidebar: React.FC<SidebarProps> = () => (
       </div>
     </div>
     <ul className="mt-20 pl-4">
-      <li>
-        <Link activeClassName="active" href="/">
-          <div className="inverted-border-radius">
-            <a className="link">Home</a>
-          </div>
-        </Link>
-      </li>
-      <li>
-        <Link activeClassName="active" href="/progress">
-          <div className="inverted-border-radius">
-            <a className="link">Progress</a>
-          </div>
-        </Link>
-      </li>
-      <li>
-        <Link activeClassName="active" href="/message">
-          <div className="inverted-border-radius">
-            <a className="link">Message</a>
-          </div>
-        </Link>
-      </li>
-      <li>
-        <Link activeClassName="active" href="/settings">
-          <div className="inverted-border-radius">
-            <a className="link">Settings</a>
-          </div>
-        </Link>
-      </li>
+      {ListLinks.map((link) => (
+        <li key={link.label}>
+          <Link activeClassName="active" href={link.to}>
+            <div className="inverted-border-radius">
+              <a className="link pl-4  flex items-center">
+                <FontAwesomeIcon icon={link.Icon} />
+                <p className="pl-2">{link.label}</p>
+              </a>
+            </div>
+          </Link>
+        </li>
+      ))}
     </ul>
   </Fragment>
 );
