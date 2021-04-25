@@ -1,18 +1,17 @@
 import Link from 'components/Link';
+import { Fragment } from 'react';
 
 interface SidebarProps {}
 const Sidebar: React.FC<SidebarProps> = () => (
-  <div className="bg-green-500">
-    <div className=" pt-10 text-white text-3xl bg-red-500 flex">
-      <div className="">
-        <Link href="/">
-          <a>
-            <div className="font-bold w-20 h-20 text-center bg-secondary-light rounded-3xl" style={{ lineHeight: '5rem' }}>
-              E
-            </div>
-          </a>
-        </Link>
-      </div>
+  <Fragment>
+    <div className="bg-red-500 pl-4 text-white text-3xl flex items-center h-40">
+      <Link href="/">
+        <a>
+          <div className="font-bold w-20 h-20 text-center bg-secondary-light rounded-3xl" style={{ lineHeight: '5rem' }}>
+            E
+          </div>
+        </a>
+      </Link>
       <div className="pl-4" style={{ lineHeight: '5rem' }}>
         <Link href="/">
           <a>
@@ -23,28 +22,36 @@ const Sidebar: React.FC<SidebarProps> = () => (
         </Link>
       </div>
     </div>
-    <ul className="mt-20">
+    <ul className="mt-20 pl-4">
       <li>
         <Link activeClassName="active" href="/">
-          <a className="text-white hover:text-red-500">Home</a>
+          <div className="inverted-border-radius">
+            <a className="link">Home</a>
+          </div>
         </Link>
       </li>
       <li>
         <Link activeClassName="active" href="/progress">
-          <a className="bg-primary-main">Progress</a>
+          <div className="inverted-border-radius">
+            <a className="link">Progress</a>
+          </div>
         </Link>
       </li>
       <li>
         <Link activeClassName="active" href="/message">
-          <a>Message</a>
+          <div className="inverted-border-radius">
+            <a className="link">Message</a>
+          </div>
         </Link>
       </li>
       <li>
         <Link activeClassName="active" href="/settings">
-          <a>Settings</a>
+          <div className="inverted-border-radius">
+            <a className="link">Settings</a>
+          </div>
         </Link>
       </li>
     </ul>
-  </div>
+  </Fragment>
 );
 export default Sidebar;
