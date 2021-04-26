@@ -51,10 +51,17 @@ const Sidebar: React.FC<SidebarProps> = () => (
         </li>
       ))}
     </ul>
-    <div className="bg-secondary-main m-auto mt-24 rounded-3xl p-6" style={{ width: 200 }}>
-      <div className="absoute bg-secondary-light">
-        <Image src="/user.svg" height="auto" width="100%" />
+    <div className="relative overflow-hidden bg-secondary-main m-auto mt-10 rounded-3xl p-6 w-11/12	">
+      <div className="mb-32">
+        <p className="font-medium text-lg text-white mb-1">Support 24/7</p>
+        <p className="text-sm text-gray-400 mb-3">Contacts us anytime</p>
+        <button className="btn bg-primary-main text-white">Start</button>
       </div>
+      <img className="absolute bottom-2 right-0  z-10" src="/user.svg" style={{ width: 170, height: 170 }} />
+      <div
+        className="bg-secondary-light absolute z-0 rounded-full p-5"
+        style={{ width: 270, height: 270, bottom: -100, right: -100 }}
+      />
     </div>
   </Fragment>
 );

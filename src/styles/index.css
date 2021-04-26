@@ -5,6 +5,11 @@
   --secondary-main: #5b48a9;
   --secondary-light: #6c59b7;
 }
+@layer components {
+  .btn {
+    @apply py-2 px-4  font-semibold rounded-lg shadow-md  focus:outline-none focus:ring-2;
+  }
+}
 
 .inverted-border-radius {
   position: relative;
