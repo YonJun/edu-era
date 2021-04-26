@@ -33,6 +33,13 @@ const MainPage = () => (
           {
             //Body
           }
+          <div className="bg-green-500 mt-10">
+            <h3 className="font-semibold text-2xl">Your unfinished courses</h3>
+            <div className="mt-5 grid grid-flow-col grid-cols-2 gap-4">
+              <div className="bg-red-400">1</div>
+              <div className="bg-red-400">2</div>
+            </div>
+          </div>
         </div>
       </Fragment>
     </Container>
