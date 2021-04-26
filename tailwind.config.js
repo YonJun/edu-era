@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         'primary-main': 'var(--primary-main)',
+        'secondary-dark': 'var(--secondary-dark)',
         'secondary-main': 'var(--secondary-main)',
         'secondary-light': 'var(--secondary-light)',
       },

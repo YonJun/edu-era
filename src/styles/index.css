@@ -1,8 +1,9 @@
 .__next,
 #__next {
   --primary-main: #fb6d3a;
-  --secondary-main: #503e9d;
-  --secondary-light: #6553b2;
+  --secondary-dark: #503e9d;
+  --secondary-main: #5b48a9;
+  --secondary-light: #6c59b7;
 }
 
 .inverted-border-radius {
