@@ -3,7 +3,6 @@ import { Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faCog } from '@fortawesome/free-solid-svg-icons';
 import { faChartBar, faComment } from '@fortawesome/free-regular-svg-icons';
-import Image from 'next/image';
 
 const ListLinks = [
   { Icon: faHome, label: 'Home', to: '/' },
