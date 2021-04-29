@@ -36,16 +36,41 @@ const MainPage = () => (
           <div className="bg-green-500 mt-10">
             <h3 className="font-semibold text-2xl">Your unfinished courses</h3>
             <div className="mt-5 grid grid-flow-col grid-cols-2 gap-4">
-              {[{ key: '1' }, { key: '2' }].map((item) => (
+              {[
+                {
+                  key: '1',
+                  img: '/user_1.png',
+                  description: 'Learning how to create simple Swift applications in 8 lessons',
+                  minutes: 82,
+                  blurColor: 'rgba(60, 17, 134, 0.3)',
+                  coverStyle: {
+                    background: 'rgba(0, 0, 0, 0.2)',
+                    opacity: '0.3',
+                  },
+                },
+                {
+                  key: '2',
+                  img: '/user_2.png',
+                  description: 'Best tips for drawing some good thematic illustration',
+                  minutes: 90,
+                  blurColor: 'rgba(148, 37, 57, 0.3);',
+                  coverStyle: {
+                    background:
+                      'linear-gradient(180deg, #511D28 15.1%, rgba(108, 40, 53, 0) 48.44%, rgba(92, 26, 36, 0.69) 100%)',
+                    opacity: '0.7',
+                  },
+                },
+              ].map((item) => (
                 <div key={item.key} className="overflow-hidden rounded-3xl relative">
-                  <div className="absolute w-full h-full cover p-8 flex flex-col justify-between">
+                  <div className="absolute w-full h-full p-8" style={item.coverStyle} />
+                  <div className="absolute w-full h-full p-8 flex flex-col justify-between">
                     <div className="text-white">
                       <div className="inline-flex items-center">
                         <div
                           className="rounded-full overflow-hidden border-2 border-primary-main"
                           style={{ width: 45, height: 45, padding: 1.5 }}
                         >
-                          <img className="rounded-full" src="/user_1.png" width="100%" height="auto" />
+                          <img className="rounded-full" src={item.img} width="100%" height="auto" />
                         </div>
                         <div className="ml-5">
                           <p className="font-bold text-base">Dianne Edwards</p>
@@ -53,17 +78,17 @@ const MainPage = () => (
                         </div>
                       </div>
                       <div className="float-right">
-                        <button className="btn bg-primary-main">82 min</button>
+                        <button className="btn bg-primary-main">{`${item.minutes} min`}</button>
                       </div>
                     </div>
                     <div
                       className="text-white relative p-4 rounded-3xl text-lg"
-                      style={{ background: 'rgba(60, 17, 134, 0.3)', backdropFilter: 'blur(10px)' }}
+                      style={{ background: item.blurColor, backdropFilter: 'blur(10px)' }}
                     >
-                      Learning how to create simple Swift applications in 8 lessons
+                      {item.description}
                     </div>
                   </div>
-                  <img src="/image_1.png" height="auto" width="100%" />
+                  <img src={`/image_${item.key}.png`} height="auto" width="100%" />
                 </div>
               ))}
               {/* <div className="bg-red-400">2</div> */}
