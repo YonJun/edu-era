@@ -40,7 +40,12 @@ const MainPage = () => (
                 <div className="absolute w-full h-full cover p-8">
                   <div className="text-white">
                     <div className="inline-flex items-center">
-                      <div className="bg-red-600">1</div>
+                      <div
+                        className="rounded-full overflow-hidden border-2 border-primary-main"
+                        style={{ width: 45, height: 45, padding: 1.5 }}
+                      >
+                        <img className="rounded-full" src="/user_1.png" width="100%" height="auto" />
+                      </div>
                       <div className="ml-5">
                         <p className="font-bold text-base">Dianne Edwards</p>
                         <p className="font-normal text-sm">@dianneed</p>
