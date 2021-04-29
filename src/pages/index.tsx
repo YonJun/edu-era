@@ -36,7 +36,23 @@ const MainPage = () => (
           <div className="bg-green-500 mt-10">
             <h3 className="font-semibold text-2xl">Your unfinished courses</h3>
             <div className="mt-5 grid grid-flow-col grid-cols-2 gap-4">
-              <div className="bg-red-400">1</div>
+              <div className="overflow-hidden rounded-3xl relative">
+                <div className="absolute w-full h-full cover p-8">
+                  <div className="text-white">
+                    <div className="inline-flex items-center">
+                      <div className="bg-red-600">1</div>
+                      <div className="ml-5">
+                        <p className="font-bold text-base">Dianne Edwards</p>
+                        <p className="font-normal text-sm">@dianneed</p>
+                      </div>
+                    </div>
+                    <div className="float-right">
+                      <button className="btn bg-primary-main">82 min</button>
+                    </div>
+                  </div>
+                </div>
+                <img src="/image_1.png" height="auto" width="100%" />
+              </div>
               <div className="bg-red-400">2</div>
             </div>
           </div>
