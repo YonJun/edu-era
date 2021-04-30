@@ -7,7 +7,9 @@ const ProgressPage = () => (
     <Container>
       <Fragment>
         <Seo title="Progress" />
-        progress
+        <div className="flex items-center justify-center w-full h-full ">
+          <h1 className="text-4xl">Progress page!</h1>
+        </div>
       </Fragment>
     </Container>
   </Fragment>
