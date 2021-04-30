@@ -7,7 +7,10 @@ const E404 = () => (
     <Container>
       <Fragment>
         <Seo title="404" />
-        404
+        <div className="flex flex-col items-center justify-center w-full h-full ">
+          <h1 className="text-4xl">404</h1>
+          <h1 className="text-2xl">Page not found!</h1>
+        </div>
       </Fragment>
     </Container>
   </Fragment>
