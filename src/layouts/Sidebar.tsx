@@ -38,10 +38,10 @@ const Sidebar: React.FC<SidebarProps> = () => (
     </div>
     <ul className="mt-20 pl-4">
       {ListLinks.map((link) => (
-        <li key={link.label}>
-          <Link activeClassName="active text-secondary-light" href={link.to}>
-            <div className="inverted-border-radius">
-              <a className="link pl-4 flex items-center cursor-pointer">
+        <li key={link.label} className="flex justify-end">
+          <Link activeClassName="active" href={link.to}>
+            <div className="inverted-border-radius text-left cursor-pointer">
+              <a className="link pl-4 flex items-center">
                 <FontAwesomeIcon className="text-gray-400" icon={link.Icon} />
                 <p className="pl-2 text-white">{link.label}</p>
               </a>

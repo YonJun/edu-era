@@ -26,19 +26,40 @@
   }
 }
 
+@keyframes animateWidthSubItems {
+  from {
+    width: 0px;
+  }
+
+  to {
+    width: 30px;
+  }
+}
+
+@keyframes animateColor {
+  from {
+    color: #fff;
+  }
+
+  to {
+    color: var(--primary-main);
+  }
+}
+
 .inverted-border-radius {
   position: relative;
   height: 50px;
-  width: 0;
-  background-color: #fff;
+
+  width: 100%;
   border-radius: 25px 0 0 25px;
 }
 
 .active {
-  width: 100%;
-  animation: 1s ease-out 0s 1 animateWidth;
+  background-color: #fff;
+  animation: 0.7s ease-out 0s 1 animateWidth;
 }
 .active * {
+  animation: 0.7s ease-out 0s 1 animateColor;
   color: var(--primary-main);
 }
 
@@ -75,6 +96,8 @@
 }
 .active::before,
 .active::after {
+  animation: 0.7s ease-out 0s 1 animateWidthSubItems;
+
   width: 30px;
 }
 
