@@ -16,17 +16,27 @@
   background-position: center center;
 }
 
+@keyframes animateWidth {
+  from {
+    width: 0px;
+  }
+
+  to {
+    width: calc(100% - 1px);
+  }
+}
+
 .inverted-border-radius {
   position: relative;
   height: 50px;
-  width: 0px;
+  width: 0;
   background-color: #fff;
   border-radius: 25px 0 0 25px;
-  transition: width 2s;
 }
 
 .active {
   width: 100%;
+  animation: 1s ease-out 0s 1 animateWidth;
 }
 .active * {
   color: var(--primary-main);
@@ -45,7 +55,6 @@
   /* background-color: #0074d9; */
   right: 0;
   height: 70px;
-  transition: box-shadow 0.4s, width 0.8s;
 }
 
 .inverted-border-radius::after {
