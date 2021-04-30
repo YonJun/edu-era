@@ -6,7 +6,7 @@ const ProgressPage = () => (
   <Fragment>
     <Container>
       <Fragment>
-        <Seo title="Home" />
+        <Seo title="Progress" />
         progress
       </Fragment>
     </Container>
